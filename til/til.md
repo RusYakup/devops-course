@@ -44,6 +44,18 @@ Day off
 
 ***
 
+## 2021.09.06 ##
+
+started learning Ansible.
+
+***
+
+## 2021.09.07 ##
+
+continued to learn Ansible.
+
+***
+
 
 
 
