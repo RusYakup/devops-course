@@ -3,7 +3,8 @@
 num_lines=5
 state=''
 whois_field=''
-process=''
+process='NULL'
+help='NULL'
 
 
 if [[ "$(whoami)" != root ]]; then
@@ -11,18 +12,41 @@ if [[ "$(whoami)" != root ]]; then
 fi
 
 
+usage() {
+  cat <<EOF
+Usage: $(basename "${BASH_SOURCE[0]}") [-h] [-v] [-n 5] [-s] [-f organization] process
+This script shows WHOIS information of a specified program (process or PID) current connections.
+Required option:
+-p, --process       Specify process name or PID
+Available options:
+-h    Print help and exit
+-n    Set number of output lines, 5 by default
+-s    Choose connection state, all by default. Possible values: listen, established, time_wait, close_wait
+-f    WHOIS field to fetch, organization by default. Possible values: organization, domain
+Usage example:
+$(basename "${BASH_SOURCE[0]}") firefox
+$(basename "${BASH_SOURCE[0]}") -n 10 -s established -f organization firefox
+EOF
+  exit
+}
 
-while getopts num_lines:state:process:field flag
+
+while getopts l:s:p:f:h flag
 do
     case "${flag}" in
-        num_lines) num_lines=${OPTARG};;
-        state) state=${OPTARG};;
-        process) process=${OPTARG};;
-        field) whois_field=${OPTARG}
+        l) num_lines=${OPTARG};;
+        s) state=${OPTARG};;
+        p) process=${OPTARG};;
+        f) whois_field=${OPTARG};;
+        h) help=${OPTARG};;
     esac
 done
 
-if [[ $process == "" ]]; then
+if [[ help != "NULL" ]]; then
+    usage
+fi
+
+if [[ $process == "NULL" ]]; then
     echo "ERROR: you must set process name or pid."
     exit 1
 fi
@@ -75,6 +99,5 @@ get_organization_by_ip() {
 }
 
 
-
-get_ip_from_netstat()
-get_organization_by_ip()
+get_ip_from_netstat
+get_organization_by_ip
