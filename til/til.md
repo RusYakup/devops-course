@@ -62,7 +62,7 @@ Learned about dev tools
 
 ***
 
-##2021.09.09 ##
+## 2021.09.09 ##
 
 Ansible configuration
 
@@ -74,7 +74,7 @@ writing BAsh script
 
 ***
 
-##2021.09.11 ##
+## 2021.09.11 ##
 
 writing BAsh script
 
