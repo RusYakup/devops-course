@@ -56,6 +56,58 @@ continued to learn Ansible.
 
 ***
 
+## 2021.09.08 ##
+
+Learned about dev tools 
+
+***
+
+##2021.09.09 ##
+
+Ansible configuration
+
+***
+
+## 2021.09.10 ##
+
+writing BAsh script
+
+***
+
+##2021.09.11 ##
+
+writing BAsh script
+
+***
+
+## 2021.09.12 ##
+
+Day off
+
+***
+
+## 2021.09.13 ##
+
+the study of the GIT.
+
+***
+
+## 2021.09.14 ##
+
+Familiarity with Docker terminology.
+
+***
+
+## 2021.09.15 ##
+
+Docker..
+
+***
+
+## 2021.09.16 ##
+
+***
+
 
 
 
