@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  flask_app:
+    image: flask_app
+    container_name: flask_app
+    build: .
+    ports:
+      - 8080:8080

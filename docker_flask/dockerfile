@@ -1,0 +1,14 @@
+FROM alpine
+
+WORKDIR /opt
+RUN mkdir -p ./src/
+
+# Install pip requirements
+RUN apk update && apk add python3 && apk add --update py3-pip
+COPY requirements.txt ./
+COPY config.yml ./
+COPY app.py ./
+RUN python3 -m pip install -r requirements.txt
+RUN chmod +x app.py
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
