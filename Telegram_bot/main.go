@@ -33,7 +33,7 @@ func main() {
 			case "start":
 				msg.Text = "devops-course repo.\nI can show you available commands by /help"
 			case "help":
-				msg.Text = "Available commands:\n/start\n/help\n/git\n/aboutme\n/til\n/tasks\n/task1\n/task2\n/task3"
+				msg.Text = "Available commands:\n/start\n/help\n/git\n/aboutme\n/til\n/tasks\n/task1\n/task2\n/task3\n/task4"
 			case "git":
 				msg.Text = "https://github.com/RusYakup/devops-course"
 			case "tasks":
@@ -48,6 +48,10 @@ func main() {
 				msg.Text = "https://github.com/RusYakup/devops-course/tree/main/task2_bash_script"
 			case "task3":
 				msg.Text = "https://github.com/RusYakup/devops-course/tree/main/Telegram_bot"
+			case "task4":
+				msg.Text = "https://github.com/RusYakup/devops-course/tree/main/docker_flask"
+
+
 
 			default:
 				msg.Text = "/help \n"
